@@ -1,4 +1,4 @@
-import { getYouTubeId, getRandomMatchScore, getRandomDuration, getRandomAgeBadge } from '../utils.js';
+import { getYouTubeId, getRandomMatchScore, getRandomDuration, getRandomAgeBadge } from '../js/utils.js';
 
 export function createCard(item) {
     const card = document.createElement('div');
