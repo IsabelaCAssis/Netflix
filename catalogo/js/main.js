@@ -21,4 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
             container.appendChild(carousel);
         });
     }
+
+    // Notification Dropdown Toggle
+    const navNotification = document.getElementById('nav-notification');
+    const notificationDropdown = document.getElementById('notification-dropdown');
+
+    if (navNotification && notificationDropdown) {
+        navNotification.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notificationDropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (notificationDropdown.classList.contains('active') && !navNotification.contains(e.target)) {
+                notificationDropdown.classList.remove('active');
+            }
+        });
+    }
 });

@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
+    <title>Netflix Clone - Filme e Séries</title>
     <link rel="stylesheet" href="catalogo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="mesh-bg">
+        <div class="mesh-circle c1"></div>
+        <div class="mesh-circle c2"></div>
+        <div class="mesh-circle c3"></div>
+    </div>
+
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <div class="navbar-left">
@@ -18,28 +25,46 @@
                 alt="Netflix">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="https://www.alura.com.br/" class="active">Início</a></li>
-                    <li><a href="https://www.alura.com.br/">Séries</a></li>
-                    <li><a href="https://www.alura.com.br/">Filmes</a></li>
-                    <li><a href="https://www.alura.com.br/">Jogos</a></li>
-                    <li><a href="https://www.alura.com.br/">Bombando</a></li>
-                    <li><a href="https://www.alura.com.br/">Minha lista</a></li>
-                    <li><a href="https://www.alura.com.br/">Melhores da Alura</a></li>
+                    <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" class="active">Início</a></li>
+                    <li><a href="https://github.com/IsabelaCAssis">Séries</a></li>
+                    <li><a href="https://github.com/IsabelaCAssis">Filmes</a></li>
+                    <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/">Jogos</a></li>
+                    <li><a href="https://github.com/IsabelaCAssis">Bombando</a></li>
+                    <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/">Minha lista</a></li>
+                    <li><a href="https://github.com/IsabelaCAssis">Melhores</a></li>
                 </ul>
             </nav>
         </div>
         <div class="navbar-right">
             <i class="fas fa-search icon"></i>
             <a href="../index.html" class="kids-link">Seu nome</a>
-            <div class="nav-notification">
+            <div class="nav-notification" id="nav-notification">
                 <i class="fas fa-bell icon"></i>
-                <span class="notification-badge">42</span>
+                <span class="notification-badge">1</span>
+                <!-- Dropdown -->
+                <div class="notification-dropdown" id="notification-dropdown">
+                    <div class="notification-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Netfix">
+                        <div class="notification-text">
+                            <p><strong>Agradeço imensamente pela oportunidade de criar e evoluir!</strong></p>
+                            <p>Siga-me nas redes sociais para acompanhar os próximos capítulos desta jornada tecnológica. Nos vemos no próximo projeto!</p>
+                            <div class="notification-links" style="margin-top: 10px; display: flex; gap: 10px;">
+                                <a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank" style="color: var(--primary-red);"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                                <a href="https://github.com/IsabelaCAssis" target="_blank" style="color: var(--primary-red);"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <span class="notification-time">Agora mesmo</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <a href="../index.html" class="profile-menu" style="text-decoration: none; color: inherit;">
                 <img class="profile-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                     alt="Profile">
                 <i class="fas fa-caret-down icon" style="font-size: 14px; margin-left: 5px;"></i>
             </a>
+            <button class="theme-toggle" id="theme-toggle" style="position: static; width: 40px; height: 40px; border-radius: 8px;">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -51,29 +76,33 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <a href="https://www.alura.com.br/" target="_blank">
-                <p>Imersão Alura AI</p>
+            <a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">
+                <p>Linkedin da Isabela</p>
             </a>
             <ul class="footer-links">
-                <li><a href="https://www.alura.com.br/" target="_blank">Perguntas frequentes</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Centro de ajuda</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Conta</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Imprensa</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Relações com investidores</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Carreiras</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Formas de assistir</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Termos de uso</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Privacidade</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Preferências de cookies</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Informações corporativas</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Entre em contato</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Teste de velocidade</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Avisos legais</a></li>
-                <li><a href="https://www.alura.com.br/" target="_blank">Só na Netflix</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Perguntas frequentes</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Centro de ajuda</a>
+                </li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Conta</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Imprensa</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Relações com investidores</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Carreiras</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Formas de assistir</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Termos de uso</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Privacidade</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Preferências de
+                        cookies</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Informações corporativas</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Entre em contato</a>
+                </li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Teste de velocidade</a></li>
+                <li><a href="https://www.linkedin.com/in/isabela-assis-correa-/" target="_blank">Avisos legais</a></li>
+                <li><a href="https://github.com/IsabelaCAssis" target="_blank">Só na Netflix</a></li>
             </ul>
         </div>
     </footer>
 
+    <script src="../js/theme.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
 

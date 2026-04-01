@@ -72,7 +72,7 @@ export function createCard(item) {
         }
 
         playTimeout = setTimeout(() => {
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${videoId}`;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&modestbranding=1&loop=1&playlist=${videoId}`;
             iframe.classList.add('playing');
             img.classList.add('playing-video');
         }, 600);

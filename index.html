@@ -4,93 +4,129 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Netflix</title>
+    <title>Netflix - Quem está assistindo?</title>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="mesh-bg">
+        <div class="mesh-circle c1"></div>
+        <div class="mesh-circle c2"></div>
+        <div class="mesh-circle c3"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <main class="conteudo-principal">
         <h1>Quem está assistindo?</h1>
-        <ul class="lista-perfis">
+        <ul class="lista-perfis" id="lista-perfis">
             <!-- perfil 1 -->
             <li class="item-perfil">
-                <a href="catalogo/catalogo.html" class="perfil">
+                <a href="catalogo/catalogo.html" class="perfil" data-id="1">
                     <figure class="avatar-container">
-                        <span class="imagem-perfil-tema-isabela" aria-hidden="true">
-                            <span class="icone-avatar">
-                                <img src="assets/1.gif" alt="Perfil de Isabela" width="128" height="128">
-                            </span>
+                        <span class="icone-avatar">
+                            <img src="assets/1.gif" alt="Perfil de Isabela">
                         </span>
-                        <figcaption class="nome-perfil">Isabela</figcaption>
+                        <div class="edit-overlay"><i class="fas fa-pencil"></i></div>
                     </figure>
+                    <figcaption class="nome-perfil">Isabela</figcaption>
                 </a>
             </li>
 
             <!-- perfil 2 -->
             <li class="item-perfil">
-                <a href="catalogo/catalogo.html" class="perfil">
+                <a href="catalogo/catalogo.html" class="perfil" data-id="2">
                     <figure class="avatar-container">
-                        <span class="imagem-perfil-tema-lucas" aria-hidden="true">
-                            <span class="icone-avatar">
-                                <img src="assets/5.gif" alt="Perfil de Lucas" width="128" height="128">
-                            </span>
+                        <span class="icone-avatar">
+                            <img src="assets/5.gif" alt="Perfil de Lucas">
                         </span>
-                        <figcaption class="nome-perfil">Lucas</figcaption>
+                        <div class="edit-overlay"><i class="fas fa-pencil"></i></div>
                     </figure>
+                    <figcaption class="nome-perfil">Lucas</figcaption>
                 </a>
             </li>
 
             <!-- perfil 3 -->
             <li class="item-perfil">
-                <a href="catalogo/catalogo.html" class="perfil">
+                <a href="catalogo/catalogo.html" class="perfil" data-id="3">
                     <figure class="avatar-container">
-                        <span class="imagem-perfil-tema-giovanna" aria-hidden="true">
-                            <span class="icone-avatar">
-                                <img src="assets/2.gif" alt="Perfil de Giovanna" width="128" height="128">
-                            </span>
+                        <span class="icone-avatar">
+                            <img src="assets/2.gif" alt="Perfil de Giovanna">
                         </span>
-                        <figcaption class="nome-perfil">Giovanna</figcaption>
+                        <div class="edit-overlay"><i class="fas fa-pencil"></i></div>
                     </figure>
+                    <figcaption class="nome-perfil">Giovanna</figcaption>
                 </a>
             </li>
 
             <!-- perfil 4 -->
             <li class="item-perfil">
-                <a href="catalogo/catalogo.html" class="perfil">
+                <a href="catalogo/catalogo.html" class="perfil" data-id="4">
                     <figure class="avatar-container">
-                        <span class="imagem-perfil-tema-marina" aria-hidden="true">
-                            <span class="icone-avatar">
-                                <img src="assets/4.gif" alt="Perfil de Marina" width="128" height="128">
-                            </span>
+                        <span class="icone-avatar">
+                            <img src="assets/4.gif" alt="Perfil de Marina">
                         </span>
-                        <figcaption class="nome-perfil">Marina</figcaption>
+                        <div class="edit-overlay"><i class="fas fa-pencil"></i></div>
                     </figure>
+                    <figcaption class="nome-perfil">Marina</figcaption>
                 </a>
             </li>
 
             <!-- perfil 5 -->
             <li class="item-perfil">
-                <a href="catalogo/catalogo.html" class="perfil">
+                <a href="catalogo/catalogo.html" class="perfil" data-id="5">
                     <figure class="avatar-container">
-                        <span class="imagem-perfil-tema-user" aria-hidden="true">
-                            <span class="icone-avatar">
-                                <img src="assets/6.jpg" alt="Perfil de User" width="128" height="128">
-                            </span>
+                        <span class="icone-avatar">
+                            <img src="assets/6.jpg" alt="Perfil de User">
                         </span>
-                        <figcaption class="nome-perfil">User</figcaption>
+                        <div class="edit-overlay"><i class="fas fa-pencil"></i></div>
                     </figure>
+                    <figcaption class="nome-perfil">User</figcaption>
                 </a>
             </li>
         </ul>
 
-
         <section class="gerenciar">
-            <button type="button" class="botao-gerenciar">Gerenciar perfis</button>
+            <button type="button" class="botao-gerenciar" id="btn-gerenciar">Gerenciar perfis</button>
         </section>
 
     </main>
+
+    <!-- Modal Editar Perfil -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <h2>Editar perfil</h2>
+            <div style="display: flex; gap: 30px; align-items: flex-start;">
+                <div style="position: relative;">
+                    <img src="" alt="Preview" class="edit-preview" id="edit-preview">
+                    <input type="file" id="file-input" style="display: none;" accept="image/*">
+                    <button type="button" onclick="document.getElementById('file-input').click()" 
+                            style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer;">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div style="flex: 1;">
+                    <div class="input-group">
+                        <label for="edit-name">Nome do Perfil:</label>
+                        <input type="text" id="edit-name" placeholder="Nome">
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-save" id="btn-save">Salvar</button>
+                        <button class="btn-cancel" id="btn-cancel">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
     <script src="js/index.js"></script>
 </body>
 
-</html>
+</html>
